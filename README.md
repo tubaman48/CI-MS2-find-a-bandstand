@@ -1,6 +1,6 @@
 # Find A Bandstand Website
 
-![Image](/assets/logos/FaB_icon.svg)
+![Image](/assets/images/logos/FaB_icon.svg)
 
 [View the live project here.](https://tubaman48.github.io/CI-MS2-find-a-bandstand)
 
