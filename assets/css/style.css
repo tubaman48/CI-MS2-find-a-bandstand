@@ -127,3 +127,72 @@ header {
 .ba-bg-color {
     background-color: #917070;
 }
+
+/************************************************** Main Page section */
+
+.section-heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.purpose-box p {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sub-heading-icon {
+    text-align: center;
+    font-size: 30px;
+}
+
+.sub-heading-title h2 {
+    text-align: center;
+}
+
+.sub-heading-title h3 {
+    text-align: center;
+}
+
+.content-section {
+    padding-top: 30px;
+    padding-bottom: 56px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.row {
+    margin: 0px;
+}
+
+/* --- Active Map and Favourites attributes */
+
+.map-and-fav-bg-color {
+    background-color: #98d4a6;
+}
+
+#mapid { 
+    height: 180px;
+}
+
+#fav-area-box {
+    border-color: red;
+}
+
+#fav-area-content {
+    min-height: 30px;
+}
+
+/* --- Pop up options (Receive Favourites and Bandstand Amendments) attributes */
+
+.pop-ups-bg-color {
+    background-color: #fafafa;
+}
+
+.receive-favourites-btn {
+    min-height: 30px;
+}
+
+.bandstand-amendments {
+    min-height: 30px;
+}

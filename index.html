@@ -54,6 +54,101 @@
         </div>
     </header>
 
+    <!-- LANDING PAGE -->
+    <section class="container-fluid content-section">
+        <!-- Purpose subsection -->
+        <div class="row">
+            <div class="col-2 sub-heading-icon">
+                <em class="far fa-handshake"></em>
+            </div>
+            <div class="col-8 sub-heading-title">
+                <h2 class="section-heading">Purpose</h2>
+            </div>
+        </div>
+        <div class="row purpose-box">
+            <div class="col-12 purpose-text">
+                <p>The aim of this site is to increase awareness of bandstands available in London and some of the surrounding counties.</p>
+            </div>
+        </div>
+
+        <!-- Subsection divider -->
+        <div class="row">
+            <div class="col-2">
+            <!-- white space for left quarter -->
+            </div>
+            <div class="col-8 sub-heading-title">
+                <hr class="section-hr" />
+            </div>
+        </div>
+
+        <!-- Map and Favourites subsection -->
+        <div class="row map-and-fav-bg-color" id="bandstand-locations">
+            <div class="col-sm-12 col-md-8">
+                <!-- Map area -->
+                <div class="row">
+                    <div class="col-2 sub-heading-icon">
+                        <em class="fas fa-map-marker-alt"></em>
+                    </div>
+                    <div class="col-8 sub-heading-title">
+                        <h2 class="section-heading">Bandstand Locations</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 sub-heading-title">
+                        <h3>Active Map (tap on markers for more options)</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" id="mapid"></div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <!-- Favourites area -->
+                <div class="row">
+                    <div class="col-2 sub-heading-icon">
+                        <em class="fab fa-gratipay"></em>
+                    </div>
+                    <div class="col-8 sub-heading-title">
+                        <h2 class="section-heading">Selected Bandstands</h2>
+                    </div>
+                </div>
+                <div class="row" id="fav-area-box">
+                    <div class="col-12" id="fav-area-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pop up forms subsection -->
+        <div class="row pop-ups-bg-color">
+            <div class="col-sm-12 col-md-6">
+                <!-- Receive Favourites area -->
+                <div class="row" id="receive-favourites">
+                    <div class="col-2 sub-heading-icon">
+                        <em class="fas fa-gift"></em>
+                    </div>
+                    <div class="col-8 sub-heading-title">
+                        <button type="submit" class="btn btn-success receive-favourites-btn">
+                            Receive Favourites
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <!-- Bandstand Amendments area -->
+                <div class="row" id="bandstand-amendments">
+                    <div class="col-2 sub-heading-icon">
+                        <em class="fas fa-wrench"></em>
+                    </div>
+                    <div class="col-8 sub-heading-title">
+                        <button type="submit" class="btn btn-success bandstand-amendments-btn">
+                            Bandstand Amendments
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
