@@ -17,6 +17,99 @@ body{
     color: #fafafa;
 }
 
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/************************************************** Header section */
+
+header {
+    background-color: #98d4a6;
+    color: #fafafa;
+} 
+
+#hero-outer{
+  height: 450px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0px;
+}
+
+#hero-image{
+  height: 100%;
+  width: 100%;
+  background: url("../images/logos/FaB_icon.svg") repeat center center;
+  -webkit-animation-name: hero-zoom;
+          animation-name: hero-zoom;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hero-zoom {
+  from{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to{
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes hero-zoom {
+  from{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to{
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#cover-text h2, #cover-text h3 {
+  color: #ffffff;
+}
+
+#cover-text {
+  font-size: 100%;
+  font-family: Oswald;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+  width: 250px;
+  height: 200px;
+
+  padding-top: 10px;
+  padding-left: 10px;
+
+  background-color: rgba(143, 243, 238, 0.7);
+
+  top: 0px;
+  left: 0px;
+
+  position: absolute;
+
+}
+
+.site-name, .site-scope {
+    text-align: center;
+}
+
+.site-scope {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.nav-item {
+    width: 120px;
+    text-align: center;
+}
+
 /* --------------- Colours defining the four menu items */
 
 .home-bg-color {
