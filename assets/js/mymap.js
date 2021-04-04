@@ -1,10 +1,27 @@
-let mymap = L.map('mapid').setView([51.27, 0.25], 8.3); // centred on Tunbridge Wells
+let mapTileLayers = L.tileLayer("http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
+    attribution: "Powered by <a href='https://developers.arcgis.com/terms/attribution/' target='_blank' rel='noopener'>Esri</a>"
+});
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoidHViYW1hbjQ4IiwiYSI6ImNrbjFtOG1kdjB6MncydnQ3YnM5NHB6bzkifQ.Zo9QA1etbxy4Wkj8byDFqg'
-}).addTo(mymap);
+let mymap = L.map("mapid", {
+    layers: [mapTileLayers],
+    center: [51.27, 0.25], // centred on Tunbridge Wells
+    zoom: 7
+});
+
+/* Add markers for bandstands */
+
+let markers = [];
+
+markers.push(L.marker([51.37268, 1.12408]).addTo(mymap)); // bandstand 1 : Herne Bay, Kent
+markers.push(L.marker([51.22712, 1.40462]).addTo(mymap)); // bandstand 2 : Deal, Kent
+markers.push(L.marker([51.35633, 1.44255]).addTo(mymap)); // bandstand 3 : Victoria Gardens, Broadstairs, Kent
+
+let popupClick = L.popup();
+function onMapClick(e) {
+    popupClick
+        .setLatLng(e.latlng)
+        .setContent("latitude: <b>" + e.latlng.lat.toFixed(5)
+        + "</b><br>longitude: <b>" + e.latlng.lng.toFixed(5)
+        + "</b>").openOn(mymap);
+}
+mymap.on('click', onMapClick);
