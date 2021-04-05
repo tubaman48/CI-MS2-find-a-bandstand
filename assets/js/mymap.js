@@ -12,16 +12,44 @@ let mymap = L.map("mapid", {
 
 let markers = [];
 
-markers.push(L.marker([51.37268, 1.12408]).addTo(mymap)); // bandstand 1 : Herne Bay, Kent
-markers.push(L.marker([51.22712, 1.40462]).addTo(mymap)); // bandstand 2 : Deal, Kent
-markers.push(L.marker([51.35633, 1.44255]).addTo(mymap)); // bandstand 3 : Victoria Gardens, Broadstairs, Kent
+markers.push({
+    markerLat:  51.37268,
+    markerLong: 1.12420,    
+    bandstandName:    "Herne Bay Bandstand",
+    locationStreet:   "Central Parade", 
+    locationTown:     "Herne Bay",
+    locationCounty:   "Kent",
+    locationPostCode: "CT6 5JN",
+    favFlag:          false
+});
 
-let popupClick = L.popup();
-function onMapClick(e) {
-    popupClick
-        .setLatLng(e.latlng)
-        .setContent("latitude: <b>" + e.latlng.lat.toFixed(5)
-        + "</b><br>longitude: <b>" + e.latlng.lng.toFixed(5)
-        + "</b>").openOn(mymap);
-}
-mymap.on('click', onMapClick);
+markers.push({
+    markerLat:  51.214609,
+    markerLong: 1.403355,    
+    bandstandName:    "The Deal Memorial Bandstand",
+    locationStreet:   "The Strand", 
+    locationTown:     "Walmer, Deal",
+    locationCounty:   "Kent",
+    locationPostCode: "CT14 7DX", 
+    favFlag:          false
+});
+
+markers.push({
+    markerLat:  51.35633,
+    markerLong: 1.44255,   
+    bandstandName:    "Broadstairs Bandstand",
+    locationStreet:   "Victoria Gardens", 
+    locationTown:     "Broadstairs",
+    locationCounty:   "Kent",
+    locationPostCode: "CT10 1QS",
+    favFlag:          false
+}); 
+
+let markerPopUp = [];
+for (i in markers) {
+    markerPopUp[i] = L.marker([markers[i].markerLat, markers[i].markerLong])
+    .bindPopup(`${markers[i].bandstandName}
+                ${markers[i].locationCounty}
+                ${markers[i].locationPostCode}`)
+    .addTo(mymap);
+};
