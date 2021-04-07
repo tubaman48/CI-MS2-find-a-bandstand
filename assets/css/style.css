@@ -30,7 +30,7 @@ header {
 } 
 
 #hero-outer{
-  height: 450px;
+  height: 375px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -40,7 +40,7 @@ header {
 #hero-image{
   height: 100%;
   width: 100%;
-  background: url("../images/logos/FaB_icon.svg") repeat center center;
+  background: url("../images/logos/FaB_icon400x400.svg") repeat center center;
   -webkit-animation-name: hero-zoom;
           animation-name: hero-zoom;
   -webkit-animation-duration: 1s;
@@ -130,6 +130,14 @@ header {
 
 /************************************************** Main Page section */
 
+h2 { /* default for extra small mobiles (eg. iPhone5) */
+    font-size: 1.12rem;
+}
+
+h3 { /* default for extra small mobiles (eg. iPhone5) */
+    font-size: 0.82rem;
+}
+
 .section-heading {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -203,4 +211,74 @@ header {
 
 .bandstand-amendments-btn {
     min-height: 30px;
+}
+
+/************************************************** Media queries */
+/* Small devices (newer mobile phones, 372px and up) */
+@media (min-width:372px) {
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 0.9rem;
+}
+
+.purpose-box p {
+text-align: center;
+padding-left: 100px;
+padding-right: 100px;
+}
+.sub-heading-icon {
+text-align: right;
+}
+.name-align {
+text-align: center;
+}
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width:768px) {
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.purpose-box p {
+text-align: center;
+padding-left: 100px;
+padding-right: 100px;
+}
+.sub-heading-icon {
+text-align: right;
+}
+.name-align {
+text-align: center;
+}
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+.purpose-box p {
+text-align: center;
+padding-left: 150px;
+padding-right: 150px;
+}
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+.purpose-box p {
+text-align: center;
+padding-left: 200px;
+padding-right: 200px;
+}
 }
