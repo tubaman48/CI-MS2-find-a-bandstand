@@ -10,8 +10,8 @@ var mymap = L.map("mapid", {
     zoom: 8,
     maxBounds: [
         // stops map from infinite scrolling at edges
-        [51.70, 1.55],       // north east boundary
-        [50.70, -0.5]        // south west boundary
+        [51.70, 2.00],       // north east boundary
+        [50.70, -1.0]        // south west boundary
     ],
     maxBoundsViscosity: 0.5, // elastic bounce-back of map edges
 });

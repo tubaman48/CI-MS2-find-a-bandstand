@@ -106,7 +106,7 @@ header {
 }
 
 .nav-item {
-    width: 120px;
+    width: 240px;
     text-align: center;
 }
 
@@ -189,10 +189,18 @@ header {
     background-color: #fafafa;
 }
 
+#receive-favourites {
+    margin-top: 20px;
+}
+
 .receive-favourites-btn {
     min-height: 30px;
 }
 
-.bandstand-amendments {
+#bandstand-amendments {
+    margin-top: 20px;
+}
+
+.bandstand-amendments-btn {
     min-height: 30px;
 }
