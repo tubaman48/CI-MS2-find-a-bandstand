@@ -10,8 +10,8 @@ var mymap = L.map("mapid", {
     zoom: 8,
     maxBounds: [
         // stops map from infinite scrolling at edges
-        [51.70, 2.00],       // north east boundary
-        [50.70, -1.0]        // south west boundary
+        [51.90, 2.00],       // north east boundary
+        [50.70, -1.2]        // south west boundary
     ],
     maxBoundsViscosity: 0.5, // elastic bounce-back of map edges
 });
@@ -55,6 +55,127 @@ markers.push({
     favFlag:          false,
     _id:              2
 }); 
+
+markers.push({
+    markerLat:  50.764473,
+    markerLong: 0.289444,   
+    bandstandName:    "EastBourne Bandstand",
+    locationStreet:   "Grand Parade", 
+    locationTown:     "Eastbourne",
+    locationCounty:   "East Sussex",
+    locationPostCode: "BN21 3AD",
+    favFlag:          false,
+    _id:              3
+}); 
+
+markers.push({
+    markerLat:  51.276,
+    markerLong: 0.194,   
+    bandstandName:    "Vine Bandstand",
+    locationStreet:   "", 
+    locationTown:     "Sevenoaks",
+    locationCounty:   "Kent",
+    locationPostCode: "TN13 3UH",
+    favFlag:          false,
+    _id:              4
+}); 
+
+markers.push({
+    markerLat:  51.4770,
+    markerLong: 0.0027,   
+    bandstandName:    "Greenwich Bandstand",
+    locationStreet:   "Greenwich Park", 
+    locationTown:     "Greenwich",
+    locationCounty:   "London",
+    locationPostCode: "SE10",
+    favFlag:          false,
+    _id:              5
+});
+
+
+markers.push({
+    markerLat:  51.4578,
+    markerLong: -0.1494,   
+    bandstandName:    "Clapham Common Bandstand",
+    locationStreet:   "Windmill Street", 
+    locationTown:     "Clapham Common",
+    locationCounty:   "London",
+    locationPostCode: "SW4",
+    favFlag:          false,
+    _id:              6
+});
+
+markers.push({
+    markerLat:  51.062,
+    markerLong: -0.325,   
+    bandstandName:    "Horsham Bandstand",
+    locationStreet:   "", 
+    locationTown:     "Horsham",
+    locationCounty:   "West Sussex",
+    locationPostCode: "",
+    favFlag:          false,
+    _id:              7
+});
+
+markers.push({
+    markerLat:  51.0758,
+    markerLong: 1.17357,   
+    bandstandName:    "Leas Cliff Bandstand",
+    locationStreet:   "The Leas", 
+    locationTown:     "Folkestone",
+    locationCounty:   "Kent",
+    locationPostCode: "CT20 2DZ",
+    favFlag:          false,
+    _id:              8
+});
+
+markers.push({
+    markerLat:  51.27492,
+    markerLong: 1.07783,   
+    bandstandName:    "Dane John Bandstand",
+    locationStreet:   "Dane John Gardens", 
+    locationTown:     "Canterbury",
+    locationCounty:   "Kent",
+    locationPostCode: "",
+    favFlag:          false,
+    _id:              9
+});
+
+markers.push({
+    markerLat:  51.44187,
+    markerLong: -0.06150,   
+    bandstandName:    "Hornman Bandstand",
+    locationStreet:   "Horniman Gardens", 
+    locationTown:     "Forest Hill",
+    locationCounty:   "London",
+    locationPostCode: "SE23 3PQ",
+    favFlag:          false,
+    _id:              10
+});
+
+markers.push({
+    markerLat:  51.5230,
+    markerLong: -0.1530,   
+    bandstandName:    "Regents Park Bandstand",
+    locationStreet:   "Regents Park", 
+    locationTown:     "Camden",
+    locationCounty:   "London",
+    locationPostCode: "NW1",
+    favFlag:          false,
+    _id:              11
+});
+
+markers.push({
+    markerLat:  51.4240,
+    markerLong: -0.0690,   
+    bandstandName:    "Crystal Palace Bowl",
+    locationStreet:   "Ledrington Road", 
+    locationTown:     "Crystal Palace",
+    locationCounty:   "London",
+    locationPostCode: "SE26 6UT",
+    favFlag:          false,
+    _id:              12
+});
 
 // apply listener for clicked markers and apply all markers with popup formatted
 var myFeatureGroup = L.featureGroup().addTo(mymap).on("click", groupClick);
