@@ -61,10 +61,13 @@ var myFeatureGroup = L.featureGroup().addTo(mymap).on("click", groupClick);
 var marker, test, id;
 
 var markerPopUp  = [];
-var selectedFavs = [];
+let noFavsMsg = `<p><em>no favourites selected</em></p>`;
+// initialise Selected Bandstands favourites area to "empty" noFavsMsg message 
+let favAreaContent = document.getElementById("fav-area-content");
+favAreaContent.innerHTML = noFavsMsg;
+
 markers.forEach(marker=>{
     id = marker._id;
-    console.log(id);
     test = id;
     markerPopUp[id] = L.marker([marker.markerLat, marker.markerLong])
     .bindPopup(`${id}# ${marker.bandstandName}<br>
@@ -78,7 +81,6 @@ markers.forEach(marker=>{
 
 function groupClick(event) {
     id = event.layer.test;
-    console.log(event.layer);
 }
 
 function toggleFavFlag(markers) {
@@ -106,12 +108,15 @@ function toggleFavFlag(markers) {
                 let afterEntry   = favWorkArea.slice(removeEntryEnd);
                 let newFavAreaContent = beforeEntry + afterEntry;
 
+                // if revised area string is now empty then reinstate default "no entries" message
+                if (newFavAreaContent === "") {
+                    newFavAreaContent = noFavsMsg;
+                }
+
                 favAreaContent.innerHTML = newFavAreaContent; 
 
             } else {                       // currently not marked as favourite ... so add
 
-                console.log("select");
-                
                 // adjust marker                  
                 markers[id].favFlag = true;   // set this entry to go through if branch next time through 
 
@@ -121,9 +126,12 @@ function toggleFavFlag(markers) {
                 // get existing displayed content 
                 let favAreaContent = document.getElementById("fav-area-content");
 
-                // append new entry 
-                favAreaContent.innerHTML = `${favAreaContent.innerHTML}<p>${markers[id].bandstandName}</p>`;
-                
+                // if default "no entries" message present then clear it out before appending new entry
+                if (favAreaContent.innerHTML.slice(0,7) === `<p><em>`) {
+                    favAreaContent.innerHTML = addFavString;
+                } else { // append new entry after existing entries
+                    favAreaContent.innerHTML = `${favAreaContent.innerHTML}${addFavString}`;
+                }    
             }
         }
     }

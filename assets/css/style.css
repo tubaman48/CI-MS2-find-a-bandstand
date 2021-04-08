@@ -189,6 +189,7 @@ h3 { /* default for extra small mobiles (eg. iPhone5) */
 
 #fav-area-content {
     min-height: 30px;
+    background-color: #fafafa;
 }
 
 /* --- Pop up options (Receive Favourites and Bandstand Amendments) attributes */
