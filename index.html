@@ -131,7 +131,8 @@
                         <em class="fas fa-gift"></em>
                     </div>
                     <div class="col-8 sub-heading-title">
-                        <button type="submit" class="btn btn-success w-100 receive-favourites-btn">
+                        <button type="submit" class="btn btn-success w-100 receive-favourites-btn"
+                            data-toggle="modal" data-target="#receiveFavouritesModal">
                             Receive Favourites
                         </button>
                     </div>
@@ -148,6 +149,61 @@
                             Bandstand Amendments
                         </button>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" role="dialog" id="receiveFavouritesModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"><em class="fas fa-gift"></em> Receive Favourites</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST">
+                        <div class="container">
+                            <div class="row" >
+                                <div class="col-12" id="instructionText">
+                                    <p>To receive details of the bandstands you've selected below, please provide your contact details and select Submit.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12" id="fav-list"></div>
+                            </div>
+                        </div>
+                        <fieldset>
+                            <legend>Contact details</legend>
+                            <div class="form-group">
+                                <label for="fName" class="label-margin-bottom">First Name</label><br>
+                                <input type="text" class="form-control" id="fName" name="first_name" required
+                                       placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail" class="label-margin-bottom">Contact email</label><br>
+                                <input type="email" class="form-control" id="contactEmail" aria-describedby="contactEmailHelp" 
+                                       placeholder="Valid email to send details to">
+                                <small id="contactEmailHelp" class="form-text text-muted">We'll only use this email for receipt of favourites.</small>
+                            </div>
+                        </fieldset>
+                        <div class="container">
+                            <div class="row" >
+                                <div class="col-6">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="cancel" class="btn btn-secondary">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12" id="completion-msg"></div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
