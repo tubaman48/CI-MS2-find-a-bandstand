@@ -226,11 +226,11 @@ h3 { /* default for extra small mobiles (eg. iPhone5) */
 
     .purpose-box p {
     text-align: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
     }
     .sub-heading-icon {
-    text-align: right;
+    text-align: center;
     }
     .name-align {
     text-align: center;
@@ -252,8 +252,8 @@ h3 { /* default for extra small mobiles (eg. iPhone5) */
 
     .purpose-box p {
     text-align: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
     }
     .sub-heading-icon {
     text-align: right;
