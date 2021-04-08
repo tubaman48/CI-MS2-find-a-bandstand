@@ -180,7 +180,7 @@ h3 { /* default for extra small mobiles (eg. iPhone5) */
 }
 
 #mapid { 
-    height: 500px;
+    height: 280px;
 }
 
 #fav-area-box {
@@ -216,69 +216,85 @@ h3 { /* default for extra small mobiles (eg. iPhone5) */
 /************************************************** Media queries */
 /* Small devices (newer mobile phones, 372px and up) */
 @media (min-width:372px) {
-h2 {
-    font-size: 1.3rem;
-}
+    h2 {
+        font-size: 1.3rem;
+    }
 
-h3 {
-    font-size: 0.9rem;
-}
+    h3 {
+        font-size: 0.9rem;
+    }
 
-.purpose-box p {
-text-align: center;
-padding-left: 100px;
-padding-right: 100px;
-}
-.sub-heading-icon {
-text-align: right;
-}
-.name-align {
-text-align: center;
-}
+    .purpose-box p {
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    }
+    .sub-heading-icon {
+    text-align: right;
+    }
+    .name-align {
+    text-align: center;
+    }
+
+    #mapid { 
+        height: 320px;
+    }
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width:768px) {
-h2 {
-    font-size: 1.8rem;
-}
+    h2 {
+        font-size: 1.8rem;
+    }
 
-h3 {
-    font-size: 1.5rem;
-}
+    h3 {
+        font-size: 1.5rem;
+    }
 
-.purpose-box p {
-text-align: center;
-padding-left: 100px;
-padding-right: 100px;
-}
-.sub-heading-icon {
-text-align: right;
-}
-.name-align {
-text-align: center;
-}
+    .purpose-box p {
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    }
+    .sub-heading-icon {
+    text-align: right;
+    }
+    .name-align {
+    text-align: center;
+    }
+
+    #mapid { 
+        height: 370px;
+    }
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-h2 {
-    font-size: 2rem;
-}
+    h2 {
+        font-size: 2rem;
+    }
 
-h3 {
-    font-size: 1.75rem;
-}
+    h3 {
+        font-size: 1.75rem;
+    }
 
-.purpose-box p {
-text-align: center;
-padding-left: 150px;
-padding-right: 150px;
-}
+    .purpose-box p {
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 150px;
+    }
+
+    #mapid { 
+        height: 430px;
+    }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-.purpose-box p {
-text-align: center;
-padding-left: 200px;
-padding-right: 200px;
-}
+    .purpose-box p {
+    text-align: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    }
+
+    #mapid { 
+        height: 500px;
+    }
 }
