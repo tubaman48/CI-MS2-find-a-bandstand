@@ -175,6 +175,10 @@ h3 { /* default for extra small mobiles (eg. iPhone5) */
 
 /* --- Active Map and Favourites attributes */
 
+#bandstand-locations {
+    padding-bottom: 20px;
+}
+
 .map-and-fav-bg-color {
     background-color: #98d4a6;
 }
