@@ -146,6 +146,8 @@
                     </div>
                     <div class="col-8 sub-heading-title">
                         <button type="submit" class="btn btn-success w-100 bandstand-amendments-btn">
+                        <!-- disabled pending unit testing
+                            data-toggle="modal" data-target="#bandstandAmendmentsModal">    -->
                             Bandstand Amendments
                         </button>
                     </div>
@@ -207,6 +209,88 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-12" id="completion-msg"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-2" role="dialog" id="bandstandAmendmentsModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"><em class="fas fa-wrench"></em> Bandstand Amendments</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST">
+                        <div class="container">
+                            <div class="row" >
+                                <div class="col-12" id="instructionText">
+                                    <p>Please provide as much of the detail below to let us know of bandstand details to add or amend and select Submit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <fieldset>
+                            <legend>Bandstand Details</legend>
+                            <div class="form-group">
+                                <label for="bandstandName" class="label-margin-bottom">Bandstand Name</label><br>
+                                <input type="text" class="form-control" id="bandstandName" name="bandstand_name" required
+                                       placeholder="name of bandstand">
+                            </div>
+                            <div class="form-group">
+                                <label for="townLocation" class="label-margin-bottom">Town Location</label><br>
+                                <input type="text" class="form-control" id="townLocation" name="town_location" required
+                                       placeholder="town">
+                            </div>
+                            <div class="container form-group">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <label for="countyLocation">County Location</label>
+                                            <select class="drop-down-box" name="countyLocation" id="county-location">
+                                                <option value=" Kt">Kent</option>
+                                                <option value=" Sy">Surrey</option>
+                                                <option value="eSx">East Sussex</option>
+                                                <option value="wSx">West Sussex</option>
+                                                <option value="GLn">Greater London</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="postCode" class="label-margin-bottom">Post Code</label><br>
+                                            <input type="text" class="form-control" id="postCode" name="post_code" required
+                                                placeholder="xxnn nxx">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Amendment provider</legend>
+                            <div class="form-group">
+                                <label for="fNameProvider" class="label-margin-bottom">First Name</label><br>
+                                <input type="text" class="form-control" id="fNameProvider" name="fname_provider" required
+                                       placeholder="first name">
+                            </div>
+                        </fieldset>
+                        <div class="container">
+                            <div class="row" >
+                                <div class="col-6">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="cancel" class="btn btn-secondary">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12" id="acknowledge-msg"></div>
                             </div>
                         </div>
                     </form>
