@@ -1,13 +1,9 @@
 // Receive Favourites modal form functions
 
 function populateSelectedFavs() {
-    // grab current favourites from Selected Bandstands area of Main Page
-    let favAreaContent = document.getElementById("fav-area-content");
-    let favWorkArea = favAreaContent.innerHTML;   
-
-    // pass over to Receive Favourites modal form area with id #fav-list
+    // pass over to Receive Favourites modal form area the favourites currently selected
     let favList = document.getElementById("fav-list");
-    favList.innerHTML = favWorkArea;
+    favList.innerHTML = localStorage.getItem('favs');
 }
 
 function confirmSubmitMsg() {

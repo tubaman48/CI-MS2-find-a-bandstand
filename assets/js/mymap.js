@@ -186,6 +186,7 @@ let noFavsMsg = `<p><em>no favourites selected</em></p>`;
 // initialise Selected Bandstands favourites area to "empty" noFavsMsg message 
 let favAreaContent = document.getElementById("fav-area-content");
 favAreaContent.innerHTML = noFavsMsg;
+localStorage.setItem('favs', favAreaContent.innerHTML);
 
 markers.forEach(marker=>{
     id = marker._id;
@@ -256,5 +257,7 @@ function toggleFavFlag(markers) {
             }
         }
     }
+    // Refresh current list of favourite bandstands in localStorage item for retrieval within modal form
+    localStorage.setItem('favs', favAreaContent.innerHTML);
     return (markers);
 }
