@@ -152,9 +152,8 @@
                         <em class="fas fa-wrench"></em>
                     </div>
                     <div class="col-8 sub-heading-title">
-                        <button type="submit" class="btn btn-success w-100 bandstand-amendments-btn">
-                        <!-- disabled pending unit testing
-                            data-toggle="modal" data-target="#bandstandAmendmentsModal">    -->
+                        <button type="submit" class="btn btn-success w-100 bandstand-amendments-btn"
+                            data-toggle="modal" data-target="#bandstandAmendmentsModal">   
                             Bandstand Amendments
                         </button>
                     </div>
@@ -222,7 +221,7 @@
             </div>
         </div>
 
-        <div class="modal" tabindex="-2" role="dialog" id="bandstandAmendmentsModal">
+        <div class="modal" tabindex="-1" role="dialog" id="bandstandAmendmentsModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -232,7 +231,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="POST">
+                    <form onsubmit="return formatBandstandAmendmentsEmail(this);">
                         <div class="container">
                             <div class="row" >
                                 <div class="col-12" id="instructionText">
@@ -257,7 +256,7 @@
                                     <div class="col-8">
                                         <div class="form-group">
                                             <label for="countyLocation">County Location</label>
-                                            <select class="drop-down-box" name="countyLocation" id="county-location">
+                                            <select class="drop-down-box" id="countyLocation" name="county_location" required>
                                                 <option value=" Kt">Kent</option>
                                                 <option value=" Sy">Surrey</option>
                                                 <option value="eSx">East Sussex</option>
@@ -282,6 +281,12 @@
                                 <label for="fNameProvider" class="label-margin-bottom">First Name</label><br>
                                 <input type="text" class="form-control" id="fNameProvider" name="fname_provider" required
                                        placeholder="first name">
+                            </div>
+                            <div class="form-group">
+                                <label for="emailProvider" class="label-margin-bottom">Contact email</label><br>
+                                <input type="email" class="form-control" id="emailProvider" name="email_provider" required aria-describedby="emailProviderHelp" 
+                                    placeholder="Valid email to respond to">
+                                <small id="emailProviderHelp" class="form-text text-muted">We'll only use this email regarding queries about the amendments.</small>
                             </div>
                         </fieldset>
                         <div class="container">
