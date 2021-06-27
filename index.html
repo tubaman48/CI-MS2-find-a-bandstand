@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-<!--    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>   -->
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!--    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>   -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-<title>Find A Bandstand</title>
+    <title>Find A Bandstand</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_4SjhjCNhbU94tfrp1JxGb");
+        })();
+    </script>
 </head>
 <body>
 
@@ -166,7 +172,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="POST">
+                    <form onsubmit="return formatFavsEmail(this);">
                         <div class="container">
                             <div class="row" >
                                 <div class="col-12" id="instructionText">
@@ -177,39 +183,38 @@
                                 <legend>Selected Favourites</legend>
                                 <div class="row">
                                     <div class="col-12" id="fav-list">
-                        <!-- prefilled detail until function written to populate from div with id #fav-area-content -->
-                        <!--                <p>Herne Bay Bandstand, Kent, CT6 5JN</p> -->
+                        <!-- populated by function populateSelectedFavs() within mymodals.js -->
                                     </div>
                                 </div>
                             </fieldset>
-                        </div>
-                        <fieldset>
-                            <legend>Contact details</legend>
-                            <div class="form-group">
-                                <label for="fName" class="label-margin-bottom">First Name</label><br>
-                                <input type="text" class="form-control" id="fName" name="first_name" required
-                                       placeholder="First Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="contactEmail" class="label-margin-bottom">Contact email</label><br>
-                                <input type="email" class="form-control" id="contactEmail" aria-describedby="contactEmailHelp" 
-                                       placeholder="Valid email to send details to">
-                                <small id="contactEmailHelp" class="form-text text-muted">We'll only use this email for receipt of favourites.</small>
-                            </div>
-                        </fieldset>
-                        <div class="container">
-                            <div class="row" >
-                                <div class="col-6">
-                                    <button type="submit" class="btn btn-success">Submit</button>
+                            <fieldset>
+                                <legend>Contact details</legend>
+                                <div class="form-group">
+                                    <label for="fName" class="label-margin-bottom">First Name</label><br>
+                                    <input type="text" class="form-control" id="fName" name="first_name" required
+                                        placeholder="First Name">
                                 </div>
-                                <div class="col-6">
-                                    <button type="cancel" class="btn btn-secondary">Cancel</button>
+                                <div class="form-group">
+                                    <label for="contactEmail" class="label-margin-bottom">Contact email</label><br>
+                                    <input type="email" class="form-control" id="contactEmail" aria-describedby="contactEmailHelp" 
+                                        placeholder="Valid email to send details to">
+                                    <small id="contactEmailHelp" class="form-text text-muted">We'll only use this email for receipt of favourites.</small>
+                                </div>
+                            </fieldset>
+                            <div class="container">
+                                <div class="row" >
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="cancel" class="btn btn-secondary">Cancel</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12" id="completion-msg"></div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12" id="completion-msg"></div>
+                                </div>
                             </div>
                         </div>
                     </form>
