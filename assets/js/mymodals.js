@@ -17,26 +17,26 @@ function formatFavsEmail(favsForm) {
             var bsName = `Bandstand Name: ${markers[id].bandstandName} <br>`;
             var bsAddr = `Bandstand Address : <br>`;
             if (markers[id].locationStreet !== "") {
-                bsAddr = `${bsaddr} ${markers[id].locationStreet} <br>`;
+                bsAddr = `${bsAddr} ${markers[id].locationStreet} <br>`;
             };
             if (markers[id].locationTown !== "") {
-                bsAddr = `${bsaddr} ${markers[id].locationTown} <br>`;
+                bsAddr = `${bsAddr} ${markers[id].locationTown} <br>`;
             };
             if (markers[id].locationCounty !== "") {
-                bsAddr = `${bsaddr} ${markers[id].locationCounty} <br>`;
+                bsAddr = `${bsAddr} ${markers[id].locationCounty} <br>`;
             };
             if (markers[id].locationPostCode !== "") {
-                bsAddr = `${bsaddr} ${markers[id].locationPostCode} <br><br>`;
+                bsAddr = `${bsAddr} ${markers[id].locationPostCode} <br><br>`;
             };
-            bandstandLocations.concat(bsName, bsAddr);
+            bandstandLocations= `${bandstandLocations} ${bsName} ${bsAddr}`;
         }
     }
 
-    // invoke emailjs
-    emailjs.send("gmail","receive_favs",{
-        to_name: favsForm.contactEmail.value,
-        from_name: favsForm.fName.value,
-        bandstand_locations: bandstandLocations
+    // invoke emailjs (Service ID = service_blkm6ga and Template ID = receive_favs)
+    emailjs.send("service_blkm6ga","receive_favs",{
+        to_name: favsForm.first_name.value,
+        from_name: favsForm.contact_email.value,
+        bandstand_locations: bandstandLocations,
     })
     .then(
         function(response) {
