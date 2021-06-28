@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /************************ --- GLOBAL --- ***************************/
 @import url('https://fonts.googleapis.com/css?family=Lato|Oswald');
 
@@ -45,33 +52,33 @@ header {
   height: 100%;
   width: 100%;
   background: url("../images/logos/FaB_icon400x400.svg") repeat center center;
-  -webkit-animation-name: hero-zoom;
-          animation-name: hero-zoom;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+          -webkit-animation-name: hero-zoom;
+                  animation-name: hero-zoom;
+          -webkit-animation-duration: 1s;
+                  animation-duration: 1s;
+          -webkit-animation-fill-mode: forwards;
+                  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes hero-zoom {
   from{
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
   }
   to{
-    -webkit-transform: scale(1);
-            transform: scale(1);
+            -webkit-transform: scale(1);
+                    transform: scale(1);
   }
 }
 
 @keyframes hero-zoom {
   from{
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
   }
   to{
-    -webkit-transform: scale(1);
-            transform: scale(1);
+            -webkit-transform: scale(1);
+                    transform: scale(1);
   }
 }
 
@@ -302,6 +309,7 @@ legend {
     height: 100%;
     width: 100%;
     position: absolute;
+    display: -ms-grid;
     display: grid; 
     place-content: center center;
     text-align: center;
@@ -332,8 +340,10 @@ legend {
 
 #screen-404 a {
     width: 50%;
+    display: -ms-grid;
     display: grid;
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
     text-decoration: none;
     border: 5px solid yellow;
     margin-top: 1rem;
