@@ -202,6 +202,11 @@ h3 { /* default for extra small mobiles (eg. iPhone5) */
     background-color: #fafafa;
 }
 
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 #receive-favourites {
     margin-top: 20px;
 }
@@ -227,14 +232,6 @@ h3 { /* default for extra small mobiles (eg. iPhone5) */
 .form-section {
     background-color: #98d4a6;
     color: #fafafa;
-}
-
-.form-group {
-    margin-bottom: 0.5rem;
-}
-
-.form-control {
-    height: calc(1.25em + .75rem + 2px);
 }
 
 .form-title {
