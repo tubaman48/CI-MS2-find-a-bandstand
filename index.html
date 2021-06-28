@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Find A Bandstand</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
         (function() {
             emailjs.init("user_4SjhjCNhbU94tfrp1JxGb");
         })();
@@ -181,7 +181,7 @@
                         <form onsubmit="return formatFavsEmail(this);">
                             <div class="container">
                                 <div class="row" >
-                                    <div class="col-12" id="instructionText">
+                                    <div class="col-12">
                                         <p>To receive details of the bandstands you've selected below, please provide your contact details and select Submit.</p>
                                     </div>
                                 </div>
@@ -239,7 +239,7 @@
                         <form onsubmit="return formatBandstandAmendmentsEmail(this);">
                             <div class="container">
                                 <div class="row" >
-                                    <div class="col-12" id="instructionText">
+                                    <div class="col-12">
                                         <p>Please provide as much of the detail below to let us know of bandstand details to add or amend and select Submit.</p>
                                     </div>
                                 </div>
@@ -258,7 +258,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="countyLocation" class="label-margin-bottom">County Location</label>
-                                    <select class="drop-down-box form-control" id="countyLocation" name="county_location" required>
+                                    <select class="drop-down-box form-control" id="countyLocation" name="county_location" required
+                                        placeholder="Kent">
                                         <option value="Kent">Kent</option>
                                         <option value="Surrey">Surrey</option>
                                         <option value="East Sussex">East Sussex</option>
