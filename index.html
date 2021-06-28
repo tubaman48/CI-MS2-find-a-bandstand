@@ -162,149 +162,145 @@
         </div>
 
         <div class="modal" tabindex="-1" role="dialog" id="receiveFavouritesModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title"><em class="fas fa-gift"></em> Receive Favourites</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form onsubmit="return formatFavsEmail(this);">
-                        <div class="container">
-                            <div class="row" >
-                                <div class="col-12" id="instructionText">
-                                    <p>To receive details of the bandstands you've selected below, please provide your contact details and select Submit.</p>
-                                </div>
-                            </div>
-                            <fieldset>
-                                <legend>Selected Favourites</legend>
-                                <div class="row">
-                                    <div class="col-12" id="fav-list">
-                        <!-- populated by function populateSelectedFavs() within mymodals.js -->
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Contact details</legend>
-                                <div class="form-group">
-                                    <label for="fName" class="label-margin-bottom">First Name</label><br>
-                                    <input type="text" class="form-control" id="fName" name="first_name" required
-                                        placeholder="First Name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="contactEmail" class="label-margin-bottom">Contact email</label><br>
-                                    <input type="email" class="form-control" id="contactEmail" name="contact_email" required aria-describedby="contactEmailHelp" 
-                                        placeholder="Valid email to send details to">
-                                    <small id="contactEmailHelp" class="form-text text-muted">We'll only use this email for receipt of favourites.</small>
-                                </div>
-                            </fieldset>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"><em class="fas fa-gift"></em> Receive Favourites</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form onsubmit="return formatFavsEmail(this);">
                             <div class="container">
                                 <div class="row" >
-                                    <div class="col-6">
-                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    <div class="col-12" id="instructionText">
+                                        <p>To receive details of the bandstands you've selected below, please provide your contact details and select Submit.</p>
                                     </div>
-                                    <div class="col-6">
-                                        <button type="cancel" class="btn btn-secondary">Cancel</button>
+                                </div>
+                                <fieldset>
+                                    <legend>Selected Favourites</legend>
+                                    <div class="row">
+                                        <div class="col-12" id="fav-list">
+                            <!-- populated by function populateSelectedFavs() within mymodals.js -->
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Contact details</legend>
+                                    <div class="form-group">
+                                        <label for="fName" class="label-margin-bottom">First Name</label><br>
+                                        <input type="text" class="form-control" id="fName" name="first_name" required
+                                            placeholder="First Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contactEmail" class="label-margin-bottom">Contact email</label><br>
+                                        <input type="email" class="form-control" id="contactEmail" name="contact_email" required aria-describedby="contactEmailHelp" 
+                                            placeholder="Valid email to send details to">
+                                        <small id="contactEmailHelp" class="form-text text-muted">We'll only use this email for receipt of favourites.</small>
+                                    </div>
+                                </fieldset>
+                                <div class="container">
+                                    <div class="row" >
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-success">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12" id="completion-msg"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12" id="completion-msg"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="modal" tabindex="-1" role="dialog" id="bandstandAmendmentsModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title"><em class="fas fa-wrench"></em> Bandstand Amendments</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form onsubmit="return formatBandstandAmendmentsEmail(this);">
-                        <div class="container">
-                            <div class="row" >
-                                <div class="col-12" id="instructionText">
-                                    <p>Please provide as much of the detail below to let us know of bandstand details to add or amend and select Submit.</p>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"><em class="fas fa-wrench"></em> Bandstand Amendments</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form onsubmit="return formatBandstandAmendmentsEmail(this);">
+                            <div class="container">
+                                <div class="row" >
+                                    <div class="col-12" id="instructionText">
+                                        <p>Please provide as much of the detail below to let us know of bandstand details to add or amend and select Submit.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <fieldset>
-                            <legend>Bandstand Details</legend>
-                            <div class="form-group">
-                                <label for="bandstandName" class="label-margin-bottom">Bandstand Name</label><br>
-                                <input type="text" class="form-control" id="bandstandName" name="bandstand_name" required
-                                       placeholder="name of bandstand">
+                            <fieldset>
+                                <legend>Bandstand Details</legend>
+                                <div class="form-group">
+                                    <label for="bandstandName" class="label-margin-bottom">Bandstand Name</label><br>
+                                    <input type="text" class="form-control" id="bandstandName" name="bandstand_name" required
+                                        placeholder="name of bandstand">
+                                </div>
+                                <div class="form-group">
+                                    <label for="townLocation" class="label-margin-bottom">Town Location</label><br>
+                                    <input type="text" class="form-control" id="townLocation" name="town_location" required
+                                        placeholder="town">
+                                </div>
+                                <div class="container form-group">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="form-group">
+                                                <label for="countyLocation" class="label-margin-bottom">County Location</label>
+                                                <select class="drop-down-box form-control" id="countyLocation" name="county_location" required>
+                                                    <option value=" Kt">Kent</option>
+                                                    <option value=" Sy">Surrey</option>
+                                                    <option value="eSx">East Sussex</option>
+                                                    <option value="wSx">West Sussex</option>
+                                                    <option value="GLn">Greater London</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="postCode" class="label-margin-bottom">Post Code</label><br>
+                                                <input type="text" class="form-control" id="postCode" name="post_code" required
+                                                    placeholder="xxnn nxx">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Amendment provider</legend>
+                                <div class="form-group">
+                                    <label for="fNameProvider" class="label-margin-bottom">First Name</label><br>
+                                    <input type="text" class="form-control" id="fNameProvider" name="fname_provider" required
+                                        placeholder="first name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailProvider" class="label-margin-bottom">Contact email</label><br>
+                                    <input type="email" class="form-control" id="emailProvider" name="email_provider" required aria-describedby="emailProviderHelp" 
+                                        placeholder="Valid email to respond to">
+                                    <small id="emailProviderHelp" class="form-text text-muted">We'll only use this email regarding queries about the amendments.</small>
+                                </div>
+                            </fieldset>
+                            <div class="container">
+                                <div class="row" >
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="townLocation" class="label-margin-bottom">Town Location</label><br>
-                                <input type="text" class="form-control" id="townLocation" name="town_location" required
-                                       placeholder="town">
-                            </div>
-                            <div class="container form-group">
+                            <div class="container">
                                 <div class="row">
-                                    <div class="col-8">
-                                        <div class="form-group">
-                                            <label for="countyLocation">County Location</label>
-                                            <select class="drop-down-box" id="countyLocation" name="county_location" required>
-                                                <option value=" Kt">Kent</option>
-                                                <option value=" Sy">Surrey</option>
-                                                <option value="eSx">East Sussex</option>
-                                                <option value="wSx">West Sussex</option>
-                                                <option value="GLn">Greater London</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="form-group">
-                                            <label for="postCode" class="label-margin-bottom">Post Code</label><br>
-                                            <input type="text" class="form-control" id="postCode" name="post_code" required
-                                                placeholder="xxnn nxx">
-                                        </div>
-                                    </div>
+                                    <div class="col-12" id="acknowledge-msg"></div>
                                 </div>
                             </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Amendment provider</legend>
-                            <div class="form-group">
-                                <label for="fNameProvider" class="label-margin-bottom">First Name</label><br>
-                                <input type="text" class="form-control" id="fNameProvider" name="fname_provider" required
-                                       placeholder="first name">
-                            </div>
-                            <div class="form-group">
-                                <label for="emailProvider" class="label-margin-bottom">Contact email</label><br>
-                                <input type="email" class="form-control" id="emailProvider" name="email_provider" required aria-describedby="emailProviderHelp" 
-                                    placeholder="Valid email to respond to">
-                                <small id="emailProviderHelp" class="form-text text-muted">We'll only use this email regarding queries about the amendments.</small>
-                            </div>
-                        </fieldset>
-                        <div class="container">
-                            <div class="row" >
-                                <div class="col-6">
-                                    <button type="submit" class="btn btn-success">Submit</button>
-                                </div>
-                                <div class="col-6">
-                                    <button type="cancel" class="btn btn-secondary">Cancel</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12" id="acknowledge-msg"></div>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

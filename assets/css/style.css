@@ -234,7 +234,7 @@ h3 { /* default for extra small mobiles (eg. iPhone5) */
 }
 
 .form-control {
-    height: calc(1em + .75rem + 2px);
+    height: calc(1.25em + .75rem + 2px);
 }
 
 .form-title {
