@@ -17,6 +17,10 @@ body{
     color: #0e0e0e;
 }
 
+.no-display { /* used to hide Receive Favourites menu item if no favourites currently selected */
+    display: none;
+}
+
 .container-fluid {
     padding-left: 0px;
     padding-right: 0px;

@@ -44,7 +44,8 @@
                 <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
                     <a class="nav-link bl-bg-color" href="#bandstand-locations">Bandstand Locations</a>
                 </li>
-                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
+                <li class="nav-item no-display" data-toggle="collapse" data-target=".navbar-collapse"
+                    id="favs-menu-toggle">
                     <a class="nav-link rf-bg-color" href="#receive-favourites">Receive Favourites</a>
                 </li>
                 <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
@@ -80,7 +81,7 @@
                 <p>The aim of this site is to increase awareness of bandstands available in London and some of the surrounding counties.</p>
                 <br>
                 <p>Each marker when tapped on will provide a summary location of that bandstand plus a toggle button to add/remove the bandstand from the favourites list adjacent to the map (below on smaller devices).</p>
-                <p>Once you have one or more favourites selected, the Receive Favourites button will present you with an option to receive the detailed addresses of the bandstands currently selected to your chosen email address.</p> 
+                <p>When you have one or more favourites selected, the Receive Favourites button will be made available to receive the detailed addresses of the bandstands currently selected to your chosen email address.</p> 
                 <br>
                 <p>If you have any amendments or additions to propose, please select Bandstand Amendments to progress.</p>
             </div>
@@ -141,11 +142,9 @@
                     <div class="col-2 sub-heading-icon">
                         <em class="fas fa-gift"></em>
                     </div>
-                    <div class="col-8 sub-heading-title">
-                        <button type="submit" class="btn btn-success w-100 receive-favourites-btn"
-                            data-toggle="modal" data-target="#receiveFavouritesModal"
-                            onclick="clearCompletionMsg(); populateSelectedFavs()">
-                            Receive Favourites
+                    <div class="col-8 sub-heading-title" id="favs-button-toggle">
+                        <button type="button" class="btn btn-info w-100 receive-favourites-btn">
+                            No Favourites Yet !
                         </button>
                     </div>
                 </div>
@@ -311,6 +310,7 @@
         crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/favsoption.js"></script>
     <script src="assets/js/mymap.js"></script>
     <script src="assets/js/mymodals.js"></script>
 

@@ -230,9 +230,10 @@ function toggleFavFlag(markers) {
                 let afterEntry   = favWorkArea.slice(removeEntryEnd);
                 let newFavAreaContent = beforeEntry + afterEntry;
 
-                // if revised area string is now empty then reinstate default "no entries" message
+                // if revised area string is now empty then reinstate default "no entries" message and remove menu options
                 if (newFavAreaContent === "") {
                     newFavAreaContent = noFavsMsg;
+                    hideReceiveFavsOption();
                 }
 
                 favAreaContent.innerHTML = newFavAreaContent; 
@@ -248,9 +249,10 @@ function toggleFavFlag(markers) {
                 // get existing displayed content 
                 let favAreaContent = document.getElementById("fav-area-content");
 
-                // if default "no entries" message present then clear it out before appending new entry
+                // if default "no entries" message present then clear it out before appending new entry and add menu options
                 if (favAreaContent.innerHTML.slice(0,7) === `<p><em>`) {
                     favAreaContent.innerHTML = addFavString;
+                    showReceiveFavsOption();
                 } else { // append new entry after existing entries
                     favAreaContent.innerHTML = `${favAreaContent.innerHTML}${addFavString}`;
                 }    
