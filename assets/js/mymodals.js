@@ -39,15 +39,27 @@ function formatFavsEmail(favsForm) {
         bandstand_locations: bandstandLocations,
     })
     .then(
-        function(response) {
-            console.log("SUCCESS", response);
+        function() {
+            // write out following message in Receive Favourites modal form area with id #completion-msg
+            document.getElementById("completion-msg").innerHTML = `<br>
+                    <h3>Details of selected favourites emailed to : 
+                    ${favsForm.contact_email.value}</h3>
+                    <br>`;
         },
         function(error) {
-            console.log("FAILED", error);
+            // write out following error in Receive Favourites modal form area with id #acknowledge-msg
+            document.getElementById("completion-msg").innerHTML = `<br>
+                    <h3>Sorry, Email not generated due to HTTP error : 
+                    ${error}</h3>
+                    <br>`;
         }
     );
     return false;  // To block from loading a new page
+}
 
+function clearCompletionMsg() {
+    // initialise completion-msg area
+    document.getElementById("completion-msg").innerHTML = ``;
 }
 
 function formatBandstandAmendmentsEmail(amendForm) {
@@ -62,20 +74,25 @@ function formatBandstandAmendmentsEmail(amendForm) {
         post_code:       amendForm.post_code.value,
     })
     .then(
-        function(response) {
-            console.log("SUCCESS", response);
+        function() {
+            // write out following message in Bandstand Amendments modal form area with id #acknowledge-msg
+            document.getElementById("acknowledge-msg").innerHTML = `<br>
+                    <h3>Details of proposed amendment provided successfully by : 
+                    ${amendForm.fname_provider.value}</h3>
+                    <br>`;
         },
         function(error) {
-            console.log("FAILED", error);
+            // write out following error in Bandstand Amendments modal form area with id #acknowledge-msg
+            document.getElementById("acknowledge-msg").innerHTML = `<br>
+                    <h3>Sorry, Email not generated due to HTTP error : 
+                    ${error}</h3>
+                    <br>`;
         }
     );
     return false;  // To block from loading a new page
 }
 
-function confirmSubmitMsg() {
-    // write out following message in Receive Favourites modal form area with id #completion-msg
-    let completionMsg = document.getElementById("completion-msg");
-    let emailInput    = document.getElementById("contactEmail").value;
-    completionMsg.innerHTML = `<h3>Details of selected favourites emailed to : ${emailInput}<br>
-                                <button type="button" class="btn btn-success">OK</button></h3>`;
+function clearAcknowledgeMsg() {
+    // initialise acknowledge-msg area
+    document.getElementById("acknowledge-msg").innerHTML = ``;
 }

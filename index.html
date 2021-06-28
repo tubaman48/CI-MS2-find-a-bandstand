@@ -78,6 +78,11 @@
         <div class="row purpose-box">
             <div class="col-12 purpose-text">
                 <p>The aim of this site is to increase awareness of bandstands available in London and some of the surrounding counties.</p>
+                <br>
+                <p>Each marker when tapped on will provide a summary location of that bandstand plus a toggle button to add/remove the bandstand from the favourites list adjacent to the map (below on smaller devices).</p>
+                <p>Once you have one or more favourites selected, the Receive Favourites button will present you with an option to receive the detailed addresses of the bandstands currently selected to your chosen email address.</p> 
+                <br>
+                <p>If you have any amendments or additions to propose, please select Bandstand Amendments to progress.</p>
             </div>
         </div>
 
@@ -139,7 +144,7 @@
                     <div class="col-8 sub-heading-title">
                         <button type="submit" class="btn btn-success w-100 receive-favourites-btn"
                             data-toggle="modal" data-target="#receiveFavouritesModal"
-                            onclick="populateSelectedFavs()">
+                            onclick="clearCompletionMsg(); populateSelectedFavs()">
                             Receive Favourites
                         </button>
                     </div>
@@ -153,7 +158,8 @@
                     </div>
                     <div class="col-8 sub-heading-title">
                         <button type="submit" class="btn btn-success w-100 bandstand-amendments-btn"
-                            data-toggle="modal" data-target="#bandstandAmendmentsModal">   
+                            data-toggle="modal" data-target="#bandstandAmendmentsModal"
+                            onclick="clearAcknowledgeMsg()">   
                             Bandstand Amendments
                         </button>
                     </div>
