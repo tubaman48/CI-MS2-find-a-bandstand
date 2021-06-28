@@ -296,6 +296,63 @@ legend {
     color: orange;
 }
 
+/************************************************** 404 page      */
+
+#screen-404 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: grid; 
+    place-content: center center;
+    text-align: center;
+    color: black;
+    background-color: #98d4a6;
+}
+
+#screen-404 h1 {
+    text-shadow: 0 0 .2rem red, 0 0 .2rem red;
+    font-size: 10rem;
+    letter-spacing: 20px;
+    color: red;
+}
+
+#screen-404 h2 {
+    text-shadow: 0 0 .2rem white, 0 0 .2rem white;
+    font-size: 2rem; 
+    letter-spacing: 5px;
+    padding-bottom: 0.8rem;
+}
+
+#screen-404 p {
+    text-shadow: 0 0 .15rem white, 0 0 .15rem white;
+    font-size: 1.3rem; 
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+
+#screen-404 a {
+    width: 50%;
+    display: grid;
+    justify-self: center;
+    text-decoration: none;
+    border: 5px solid yellow;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: .8rem 1.6rem;
+    cursor: pointer;
+    color: black;
+    text-shadow: 0 0 .1rem blue, 0 0 .1rem blue;
+    letter-spacing: 2px;
+    font-size: 1.3rem; 
+}
+
+#screen-404 a:hover {
+    background-color: red;
+    color: whitesmoke;
+    border: 5px solid whitesmoke;
+}
+
+
 /************************************************** Media queries */
 /* Small devices (newer mobile phones, 372px and up) */
 @media (min-width:372px) {
