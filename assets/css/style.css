@@ -303,6 +303,26 @@ legend {
     color: orange;
 }
 
+/************************************************** Footer section */
+
+footer {
+    background-color: #98d4a6;
+    color: #0e0e0e;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+/*----------------- Copyright entry */
+.copyright {
+	margin: auto 8px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.copyright em {
+	margin-right: 5px;
+}
+
 /************************************************** 404 page      */
 
 #screen-404 {
