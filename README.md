@@ -279,8 +279,41 @@ I've decided on a complementary different colour scheme for the body of each sep
 
 ## Project barriers and solutions
 
-> - to be documented
+> - When I came to develop the second of the two modal forms (covering the Bandstand Amendments function) my initial testing to just enter the modal saw the website hanging,
+    whereby the homepage had become inactive but the modal page hadn't appeared, so my session became locked with no way of navigating backwards or forwards.
+    A closer look at the HTML and JS code revealed that I hadn't consistently used the same upper and lower case characters for one particular variable name.
+> - Once I rectified the variable naming problem I found that I was no longer getting stuck, but instead it was jumping out of the modal mode before it reached the modal form.
+    A number of cycles of using the Chrome Inspect debugger with breakpoints inserted at strategic points was inconclusive as to where the issue lay.
+    A more indepth analysis of my HTML <div> layering for both modals, revealed that I was missing a closing </div> at the end of each modal definition, which meant that the 2nd
+    modal was embedded in the structure of the 1st modal causing the internal processing to jump around in an unpredictable manner.
+> - The issue was resolved by re-aligning the indentation of the divs for both modals, which then clearly showed where the two missing </div> tags needed to be inserted.
+    After that the second modal form opened up ok and the main issue was resolved.
 
+> - The other battle I had was with passing the list of bandstands selected on the main page into the first modal form, I got around this by using the localStorage variable to
+    maintain contcalls ext.
+
+> - Another significant barrier I had to overcome was understanding enough about emailJS template set up and acually embedding the correctly formatted emailJS calls within my js
+    modules. This took a bit of jumping about between the CI Student videos, the emailJS documentation and native js code that I'd already coded, to piece together the end to end 
+    process.
+
+> - As I was finishing off the processing to generate a formatted email of the selected favourite bandstands via the Receive Favourites modal form I looked to find a neat way of
+    prevent the user reaching the modal form if no bandstands were marked as favourites, as it made no sense to allow an email to be generated if there were no bandstand details
+    to pass over.
+    That's when I came up with the processing contained in the favsoption.js which starts from the position that no favourites have been selected, therefore the Receive Favourites
+    menu option needs to be initially hidden and the Receive Favourites button that allows entry to the corresponding modal form needed to be disabled, with a different text on the
+    button utilising a subtly different background colour.
+    From then on there are only two events which could change that state :
+    1) is where the Selected Favourites string goes from the emboldened text (starting with HTML tag sequence <p><em> ) stating that there are no favourites selected, to the first
+       added favourite (which just starts with the <p> tag).
+       At this point, the no-display class gets removed from the Receive Favourites nav bar entry and the inactive "Not yet selected" button becomes the active "Receive Favourites".
+       button.
+    2) is where the reverse happens as the Selected Favourites string goes back to starting with <p><em> instead of just <p>.
+    
+    
+    
+    ggles les the does the following :
+    1) whilst there changes the display state of the Receive
+---
 
 ## Code validity
 
@@ -301,8 +334,7 @@ I've decided on a complementary different colour scheme for the body of each sep
 > - The branches were then merged with the master branch after any conflicts were addressed.
 
 ---
-
-## Deployment
+# Deployment
 
 This project has been deployed on GitHub Pages with the following process:
 
