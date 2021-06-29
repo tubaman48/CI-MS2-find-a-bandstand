@@ -1,6 +1,6 @@
-# Find A Bandstand Website
+# Find a Bandstand Website
 
-![Image](/assets/images/logos/FaB_icon.svg)
+![Image](/assets/images/logos/FaB_icon400x400.svg)
 
 [View the live project here.](https://tubaman48.github.io/CI-MS2-find-a-bandstand)
 
@@ -11,7 +11,7 @@
 -   The public who want to go and see the concerts at these locations
 -   Event organisers wishing to put on concerts.
 
-=== Mock up image to insert here ===
+![Image](/assets/images/CI-MS2-Find-a-Bandstand_mock_up.png)
 
 ---
 
@@ -47,7 +47,7 @@
 
 ## Description
 
-> The Find A Bandstand Project is dedicated to increasing the awareness of bandstands to increase their utilisation and thus maintain their longer term viability.
+> The Find a Bandstand Project is dedicated to increasing the awareness of bandstands to increase their utilisation and thus maintain their longer term viability.
 
 ---
 
@@ -58,17 +58,20 @@ The priority focus is on direct contact and social media links.
 
 - ### 0. User Stories
 
+The following user stories remain in the scope of the final project delivered :
 > - _"As a music group we wish to find bandstands available in our area for potential concerts via a map"_
-> - _"As a music group we would like to be able to reach the websites of the organisations connected to the bandstands to find out more about them"_
 > - _"As a music group we would like to advise of any public bandstands not indicated on the map via email"_
 > - _"As a lover of outdoor concerts I wish to find bandstands available in our area putting on concerts"_
-> - _"As a lover of outdoor concerts I would like to be able to reach the websites of the organisations connected to the bandstands to find out more about them"_
 > - _"As a lover of outdoor concerts I would like to advise of any public bandstands not indicated on the map via email"_
 > - _"As an event organiser I wish to find bandstands available in our area with a view to enabling concerts"_
-> - _"As an event organiser I would like to be able to reach the websites of the organisations connected to the bandstands to find out more about them"_
 > - _"As an event organiser I would like to advise of any public bandstands not indicated on the map via email"_
 > - _"As a user of this resource (in any capacity) I would like a responsive design that caters for mobile and non-mobile devices"_
 > - _"As a user of this resource (in any capacity) I would like to be able to receive summary details of any bandstands that I'm interested in via email"_
+
+The following user stories were descoped early on in the project following initial discussions with my mentor (Anto Rodriges) :
+> - _"As a music group we would like to be able to reach the websites of the organisations connected to the bandstands to find out more about them"_
+> - _"As a lover of outdoor concerts I would like to be able to reach the websites of the organisations connected to the bandstands to find out more about them"_
+> - _"As an event organiser I would like to be able to reach the websites of the organisations connected to the bandstands to find out more about them"_
 
 ---
 
@@ -110,13 +113,12 @@ The priority focus is on direct contact and social media links.
 
 - ### 4. Skeleton
 
-> - [Wireframes](/assets/docs/RL-CI-MS2-Wireframes.pdf): A single page website made up of a bandstand location map, favourite bandstands selected, a form to email details to user and a form for users to advise new /ameded details of bandstands and their associated contacts.
->
-> - Home, Brass Band Listing, Concert Band Listing, Orchestra Listing, Music Service Listing and Directory Entry Maintenance Section/Pages
+> - [Wireframes](/assets/docs/RL-CI-MS2-Wireframes.pdf): A single page website made up of a bandstand location map, favourite bandstands selected, 
+>    a form to email details to user and a form for users to advise new / amended details of bandstands.
 >
 > - Fixed navigation bar - Menu headings pointing to each of the 4 sections.
 >
-> - Fixed Footer with Copyright info and Social Media icons
+> - Fixed Footer with Copyright info
 
 - ### 5. Surface
 
@@ -150,7 +152,6 @@ I've decided on a complementary different colour scheme for the body of each sep
 >    3) A contact form to enable details to be send to users of the current favourites selected
 >    4) A contact form to enable users to advise of new/amended Bandstand details.
 > - Fixed navigation allows the user to easily navigate, regardless of which section they are current positioned in.
-> - Fixed footer allows the user quick accessibility to social media links.
 > - Fixed, stacked images for mobile views.
 
 - ### Features Left to Implement when skills develop
@@ -223,7 +224,56 @@ I've decided on a complementary different colour scheme for the body of each sep
 
 ## Testing
 
-> -  to be documented
+> - After initial wireframe design, I checked each navigation item link is working correctly to each section or page. I set a _temporary_ contrasting background colour to each page to mark out each section.
+> - Tested responsiveness of the wireframe using Dev Tools and confirmed basic structure looks and works well on all mobile decides from 320px, up to desktop size.
+### ** Navigation Menu Bar tests **
+> - Tested **Logo text** in menu bar to ensure it points to the Home page.
+> - Tested default **Home, Bandstand Locations, Bandstand Amendments** links in menu bar to ensure they point to each section and position correctly.
+> - Tested **Receive Favourites** link in menu bar (available/visible only when 1 or more favourite bandstands are listed) to ensure that it points to the section and positions correctly.
+### ** Map and Selected Favourites area tests **
+> - Tested map at default zoom level to ensure that the focus returns to the area covering the markers (London and the south eastern counties) if the map is significantly dragged away from that area.
+> - Tested all markers to ensure that they were positioned correctly on the map and that they displayed the correct summary information when selected.
+> - Tested all markers to ensure that the toggle function corrected actioned the addition/removal of the bandstand name to/from the Selected Favourites area.
+> - Tested that when no bandstands were selected as favourites that the default "No bandstands selected" text displayed in the Selected Favourites area.
+> - Tested that when no bandstands were selected as favourites that the **Receive Favourites** menu bar option was hidden (and therefore could not be selected).
+> - Tested that when no bandstands were selected as favourites that the inactive **No Favourites Yet!** button displays below the map.
+> - Tested that when 1 or more bandstands were listed in the Selected Favourites area that the **Receive Favourites** menu bar option was visible and selectable.
+> - Tested that when 1 or more bandstands were listed in the Selected Favourites area that the active **Receive Favourites** button displays below the map.
+### ** Receive Favourites modal form tests **
+> - Tested that when the active **Receive Favourites** button displays on the home page that clicking on it navigates the user to the Received Favourites modal form and pre-populates it with the bandstands listed at that moment as favourites.
+> - Tested on each entry into the Received Favourites modal form that the message area at the bottom of the form after the submit button is empty of text.
+> - Tested **Submit** button on the Received Favourites modal form without any text in inputs to ensure that it provides the desired error of 'Please fill out this field' to appropriate required fields.
+> - Tested **Contact email** entry input by not entering a valid email address. This provides the desired error of 'Please include an @ in the email address'.
+> - Tested **Submit** button on the Received Favourites modal form once valid input provided in First Name and Contact email fields to ensure required email was generated by emailJS and that successful completion message is displayed to the user below the submit button.
+> - Checked the content of the email produced to ensure all the correct detail is there.
+> - Tested that selecting the close modal form "X" cleanly exits the user from the modal form and returns the screen focus back to the home page.
+### ** Bandstand Amendments modal form tests **
+> - Tested that when the **Bandstand Amendments** button is clicked on from the home page that it navigates the user to the Bandstand Amendments modal form.
+> - Tested on each entry into the Bandstand Amendments modal form that the message area at the bottom of the form after the submit button is empty of text.
+> - Tested **Submit** button on the Bandstand Amendments modal form without any text in inputs to ensure that it provides the desired error of 'Please fill out this field' to appropriate required fields.
+> - Tested **Drop down menu** for County Location to ensure only _one option can be selected_ and that _at least one option_ is required.
+> - Tested **Contact email** entry input by not entering a valid email address. This provides the desired error of 'Please include an @ in the email address'.
+> - Tested **Submit** button on the Bandstand Amendments modal form once valid input provided in all fields to ensure required email was generated by emailJS and that successful completion message is displayed to the user below the submit button.
+> - Checked the content of the email produced to ensure all the correct detail is there.
+> - Tested that selecting the close modal form "X" cleanly exits the user from the modal form and returns the screen focus back to the home page.
+### ** General functional and usability tests **
+> - Further testing of Responsiveness of the 2 pages using [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly)
+> - 1. [Home Page](https://search.google.com/test/mobile-friendly?id=M9vvg5u5KfcMuqIq6_Io7w)
+> - 2. [404 Page](https://search.google.com/test/mobile-friendly?id=DIHC02OvofNRfktdJEXZhA)
+> - Tested overall site colours on [a11y](https://color.a11y.com/), a Color Contrast Accessibility Validator. Tests for both of the pages (index.html and 404.html) came back with excellent results (any reported anomalies were misdiagnosed).
+> - Tested [HTML Validation](https://validator.w3.org/) No errors or warnings to show.
+> - Tested [CSS Validation](https://jigsaw.w3.org/css-validator/)
+> - 1.  Under Fieldset definition "Property xxx doesn't exist" Error on 6 items. Researched this and found that this is a non-issue as the 6 properties are required within the fieldset element to correctly format padding and margins in the modal form.
+> - 2.  Warning 'Imported style sheets are not checked in direct input and file upload modes'. Confident to ignore these after researching and a common answer is that the validator will not validate imported style sheets. See [Stack Overflow](https://stackoverflow.com/questions/25946111/importing-css-is-ending-up-with-an-error).
+> - Tested [JS Validation](https://jshint.com/) No errors or warnings of concern outstanding. 
+>   Here is a capture of the summary jshint reports for the 3 js modules coded by me (favoptions, mymap and mymodals) :
+>   ![Image](/assets/images/jshint_reports_for_my_js_modules.png))
+> - Tested site URL on [Website Page Test](https://www.webpagetest.org/) which rendered good results except for some security header issues and caching - [available here](https://www.webpagetest.org/result/210629_AiDcK9_a9f4e72a2362574c9bb5d539805b4dfc/)
+> - Tested site URL on [Responsinator](http://www.responsinator.com/) which returned no significant display issues across all device types in portrait and landscape modes.
+> - Checked grammar and spelling throughout document.
+> - Ran CSS through [Autoprefixer](https://autoprefixer.github.io/) and copied new CSS code back into style.css doc.
+> - Re-ran CSS Validation and 6 warnings appeared for 'unknown vendor extension'. Confident to ignore these as answered on [Stack Overflow](https://stackoverflow.com/questions/5271955/css-parse-errors-from-a-generated-stylesheet).
+> - Ran README text through [Online-Spellcheck](https://www.online-spellcheck.com/) to double-check on grammar and spelling.) No errors or warnings to show.
 
 ---
 
@@ -271,10 +321,9 @@ This project has been deployed on GitHub Pages with the following process:
 
 > ### Media
 >
-> - The main "hero-image" photo used in this project is _owned and provided by myself_
+> - The main "hero-image" cartoon of a bandstand used in this project is _owned and provided by myself_
 > - The icons utilised in the **Technology Used** section of the README for this project were obtained from [FontAwesome](https://fontawesome.com/)
-> - The "Find A Bandstand" site icon was created via my tubaman48 account at [vectr.com](https://vectr.com/).
-> - The logos used in the Detailed Listings for the different organisations were obtained from the individual organisation websites.
+> - The "Find a Bandstand" site icon was created via my tubaman48 account at [vectr.com](https://vectr.com/).
 >
 > ### Content
 >
@@ -296,9 +345,13 @@ This project has been deployed on GitHub Pages with the following process:
 >
 > I would like to thank:
 >
-> - My mentor, **Antonio Rodrigues**, for his guidance, patience and encouragement throughout this project.
-> - **CI staff** and **Slack Community** for always being on-hand with questions posted and assistance requests.
-> - Everyone that takes part in the Slack calls, specifically from the **#In-It-Together** and **#Study-Group** channels.
+> - My mentor, **Antonio Rodrigues**, for his guidance, patience and encouragement throughout this project, especially in the early stages of planning, 
+    when he helped me descope the project to a manageable size.
+> - My Hackathon team **"They Think It's All Clover"** from February 2021, who directed me towards using the Leaflet JS Map API instead of the Google Map API.
+> - **CI staff** and **Slack Community** for always being on-hand with questions posted and assistance requests, with a special call-out to **Mark McGann**,
+    **Ulysses** and **Alex Farrell** from the Student Care team who helped me take a very necessary 2 month break from the course through April and May 
+    to help me come to terms with the loss of my eldest brother to a brain tumour/cancer earlier in the year.
+> - Everyone that takes part in the Slack calls, specifically from the **#In-It-Together** and **#London Community** channels.
 
 ## Support
 

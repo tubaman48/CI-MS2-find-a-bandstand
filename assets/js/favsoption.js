@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 // This javascript library handles the availability of the Receive Favourites option
 
 function showReceiveFavsOption() { // when 1 or more favourite bandstands selected

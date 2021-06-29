@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 // apply map
 
 var mapTileLayers = L.tileLayer("http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
@@ -199,7 +200,7 @@ markers.forEach(marker=>{
     .addTo(myFeatureGroup);
     markerPopUp[id].test = test;
     markerPopUp[id]._id = id;
-})
+});
 
 function groupClick(event) {
     id = event.layer.test;
@@ -223,9 +224,9 @@ function toggleFavFlag(markers) {
                 let favWorkArea = favAreaContent.innerHTML;   // grab current favourites
 
                 // the following logic is based on each Bandstand entry being enclosed in <p> </p> pair
-                removeEntryBeg   = favWorkArea.search(removeFavString)             // Find start point of remove entry
-                removeEntryToEnd = favWorkArea.slice(removeEntryBeg)               // Grab from start of remove entry
-                removeEntryEnd   = removeEntryBeg + removeEntryToEnd.search("</p>") + 4;  // ... to determine end point
+                let removeEntryBeg   = favWorkArea.search(removeFavString);             // Find start point of remove entry
+                let removeEntryToEnd = favWorkArea.slice(removeEntryBeg);               // Grab from start of remove entry
+                let removeEntryEnd   = removeEntryBeg + removeEntryToEnd.search("</p>") + 4;  // ... to determine end point
                 let beforeEntry  = favWorkArea.slice(0,removeEntryBeg);
                 let afterEntry   = favWorkArea.slice(removeEntryEnd);
                 let newFavAreaContent = beforeEntry + afterEntry;

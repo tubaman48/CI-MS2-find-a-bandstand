@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 // Receive Favourites modal form functions
 
 function populateSelectedFavs() {
@@ -18,16 +19,16 @@ function formatFavsEmail(favsForm) {
             var bsAddr = `Bandstand Address : <br>`;
             if (markers[id].locationStreet !== "") {
                 bsAddr = `${bsAddr} ${markers[id].locationStreet} <br>`;
-            };
+            }
             if (markers[id].locationTown !== "") {
                 bsAddr = `${bsAddr} ${markers[id].locationTown} <br>`;
-            };
+            }
             if (markers[id].locationCounty !== "") {
                 bsAddr = `${bsAddr} ${markers[id].locationCounty} <br>`;
-            };
+            }
             if (markers[id].locationPostCode !== "") {
                 bsAddr = `${bsAddr} ${markers[id].locationPostCode} <br><br>`;
-            };
+            }
             bandstandLocations= `${bandstandLocations} ${bsName} ${bsAddr}`;
         }
     }
